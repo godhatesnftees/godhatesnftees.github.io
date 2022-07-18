@@ -1,0 +1,415 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ape Hater Club</title>
+	<!--========== FAVICON ==========-->
+	<link rel="icon" href="assets/img/logo_transparent.png">
+	<link href="assets/css/output.css" rel="stylesheet">
+	<link href="assets/css/input.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/three-dots.css">
+    <style>
+        @keyframes spinner-line-fade-default {
+            0%, 100% {
+                opacity: 0.22; /* minimum opacity */
+            }
+            1% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+	<noscript>You need to enable JavaScript to run this website.</noscript>
+	<header class="w-full items-center relative z-50 left-0 right-0 h-20">
+		<!--logo-->
+		<!--<div class=" logoheader absolute left-1/2 top-4 z-50 -translate-x-1/2 justify-center duration-500 opacity-1 translate-y-0" >-->
+		<div class=" absolute left-1/2 -translate-x-1/2 top-1 justify-center ">
+			<a href="/"> <img class="h-28 " src="assets/img/logo_transparent_white.png" href="/"> </a>
+		</div>
+		<div class="px-5 flex" id="main_nav">
+			<nav class="flex uppercase items-center justify-between w-full mt-5 transition px-24">
+				<ul class="flex space-x-6">
+					<li> <a class="desktop-nav-highlight" href="https://opensea.io/collection/godhatesnftees" target="_blank" rel="noreferrer">BUY</a> </li>
+                    <li> <a class="desktop-nav-highlight" href="#mutate">MUTATE</a> </li>
+					<li> <a class="desktop-nav-highlight" href="#about">ABOUT</a> </li>
+					<li> <a class="desktop-nav-highlight" href="#faq">FAQ</a> </li>
+				</ul>
+				<div class="flex  ">
+					<!--ICONS-->
+					<div class="flex items-center  md:justify-end">
+						<ul class="mt-14 flex align-center items-center md:justify-end space-x-5 pt-[2px] md:mt-0">
+							<li>
+								<a href="https://twitter.com/ApeHaterClub" target="_blank" rel="noreferrer" class="inline-block h-5 md:h-3-5 text-gray-light">
+									<svg class="h-full w-auto" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M21.0268 2.17225C20.2532 2.51569 19.4217 2.74698 18.5491 2.85124C19.4401 2.31769 20.1244 1.47223 20.4459 0.464701C19.6127 0.958831 18.6893 1.31804 17.7063 1.51166C16.9204 0.673217 15.7981 0.1493 14.5575 0.1493C11.7724 0.1493 9.72576 2.74786 10.3548 5.44542C6.77062 5.26582 3.59207 3.54863 1.46399 0.93868C0.3338 2.87752 0.877868 5.41388 2.79831 6.69827C2.09216 6.67549 1.42632 6.48187 0.845452 6.15858C0.798142 8.157 2.23059 10.0266 4.30523 10.4428C3.69809 10.6075 3.03311 10.646 2.35675 10.5164C2.9052 12.2301 4.49798 13.4768 6.38688 13.5118C4.57332 14.9338 2.28841 15.5689 0 15.2991C1.90906 16.523 4.17732 17.2371 6.61292 17.2371C14.6224 17.2371 19.1475 10.4726 18.8742 4.40547C19.717 3.79657 20.4485 3.03698 21.0268 2.17225Z" fill="currentColor"></path>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="https://discord.gg/godhatesnfteesclub" target="_blank" rel="noreferrer" class="inline-block h-5 md:h-3-5 text-gray-light">
+									<svg class="h-full w-auto" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_0_6)">
+											<path d="M20.1616 2.47123C18.7156 1.80777 17.1651 1.31896 15.5439 1.039C15.5143 1.0336 15.4849 1.0471 15.4696 1.07411C15.2702 1.42878 15.0493 1.89149 14.8947 2.25517C13.151 1.99412 11.4162 1.99412 9.70823 2.25517C9.55352 1.8834 9.32461 1.42878 9.1243 1.07411C9.10909 1.048 9.0796 1.0345 9.05008 1.039C7.42977 1.31807 5.87921 1.80688 4.43237 2.47123C4.41985 2.47663 4.40911 2.48564 4.40198 2.49734C1.4609 6.89125 0.655219 11.1772 1.05046 15.4099C1.05225 15.4306 1.06387 15.4505 1.07997 15.463C3.02041 16.8881 4.90006 17.7532 6.7448 18.3266C6.77433 18.3356 6.80561 18.3248 6.8244 18.3005C7.26077 17.7046 7.64976 17.0762 7.98328 16.4154C8.00296 16.3768 7.98417 16.3308 7.94395 16.3155C7.32694 16.0815 6.73943 15.7961 6.17429 15.4721C6.12959 15.4459 6.12601 15.382 6.16713 15.3514C6.28606 15.2623 6.40502 15.1696 6.51858 15.0759C6.53912 15.0588 6.56775 15.0552 6.59191 15.066C10.3047 16.7611 14.3242 16.7611 17.9931 15.066C18.0172 15.0543 18.0459 15.0579 18.0673 15.075C18.1809 15.1687 18.2998 15.2623 18.4197 15.3514C18.4608 15.382 18.4581 15.4459 18.4134 15.4721C17.8483 15.8024 17.2607 16.0815 16.6428 16.3146C16.6026 16.3299 16.5847 16.3768 16.6044 16.4154C16.9451 17.0753 17.3341 17.7036 17.7624 18.2996C17.7803 18.3248 17.8125 18.3356 17.842 18.3266C19.6957 17.7532 21.5753 16.8881 23.5158 15.463C23.5328 15.4505 23.5435 15.4315 23.5453 15.4108C24.0183 10.5173 22.753 6.26651 20.1911 2.49823C20.1848 2.48564 20.1741 2.47663 20.1616 2.47123ZM8.53772 12.8326C7.41993 12.8326 6.4989 11.8064 6.4989 10.5461C6.4989 9.2858 7.40206 8.25958 8.53772 8.25958C9.68229 8.25958 10.5944 9.29481 10.5765 10.5461C10.5765 11.8064 9.67334 12.8326 8.53772 12.8326ZM16.0759 12.8326C14.9582 12.8326 14.0371 11.8064 14.0371 10.5461C14.0371 9.2858 14.9403 8.25958 16.0759 8.25958C17.2205 8.25958 18.1326 9.29481 18.1147 10.5461C18.1147 11.8064 17.2205 12.8326 16.0759 12.8326Z" fill="currentColor"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_0_6">
+												<rect width="22.6862" height="17.5739" fill="white" transform="translate(0.958481 0.906255)"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="https://instagram.com/ApeHaterClub" target="_blank" rel="noreferrer" class="inline-block h-5 md:h-3-5 text-gray-light">
+									<svg class="h-full w-auto" stroke="currentColor" fill="none" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+										<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="currentColor"></path>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="https://opensea.io/collection/ApeHaterClub" target="_blank" rel="noreferrer" class="inline-block h-5 md:h-3-5 text-gray-light">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-full w-auto" width="15.16" height="13" viewBox="0 0 24 24" fill="none">
+										<path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.629 0 12 0ZM5.92 12.403l.051-.081 3.123-4.884a.107.107 0 0 1 .187.014c.52 1.169.972 2.623.76 3.528-.088.372-.335.876-.614 1.342a2.405 2.405 0 0 1-.117.199.106.106 0 0 1-.09.045H6.013a.106.106 0 0 1-.091-.163zm13.914 1.68a.109.109 0 0 1-.065.101c-.243.103-1.07.485-1.414.962-.878 1.222-1.548 2.97-3.048 2.97H9.053a4.019 4.019 0 0 1-4.013-4.028v-.072c0-.058.048-.106.108-.106h3.485c.07 0 .12.063.115.132-.026.226.017.459.125.67.206.42.636.682 1.099.682h1.726v-1.347H9.99a.11.11 0 0 1-.089-.173l.063-.09c.16-.231.391-.586.621-.992.156-.274.308-.566.43-.86.024-.052.043-.107.065-.16.033-.094.067-.182.091-.269a4.57 4.57 0 0 0 .065-.223c.057-.25.081-.514.081-.787 0-.108-.004-.221-.014-.327-.005-.117-.02-.235-.034-.352a3.415 3.415 0 0 0-.048-.312 6.494 6.494 0 0 0-.098-.468l-.014-.06c-.03-.108-.056-.21-.09-.317a11.824 11.824 0 0 0-.328-.972 5.212 5.212 0 0 0-.142-.355c-.072-.178-.146-.339-.213-.49a3.564 3.564 0 0 1-.094-.197 4.658 4.658 0 0 0-.103-.213c-.024-.053-.053-.104-.072-.152l-.211-.388c-.029-.053.019-.118.077-.101l1.32.357h.01l.173.05.192.054.07.019v-.783c0-.379.302-.686.679-.686a.66.66 0 0 1 .477.202.69.69 0 0 1 .2.484V6.65l.141.039c.01.005.022.01.031.017.034.024.084.062.147.11.05.038.103.086.165.137a10.351 10.351 0 0 1 .574.504c.214.199.454.432.684.691.065.074.127.146.192.226.062.079.132.156.19.232.079.104.16.212.235.324.033.053.074.108.105.161.096.142.178.288.257.435.034.067.067.141.096.213.089.197.159.396.202.598a.65.65 0 0 1 .029.132v.01c.014.057.019.12.024.184a2.057 2.057 0 0 1-.106.874c-.031.084-.06.17-.098.254-.075.17-.161.343-.264.502-.034.06-.075.122-.113.182-.043.063-.089.123-.127.18a3.89 3.89 0 0 1-.173.221c-.053.072-.106.144-.166.209-.081.098-.16.19-.245.278-.048.058-.1.118-.156.17-.052.06-.108.113-.156.161-.084.084-.15.147-.208.202l-.137.122a.102.102 0 0 1-.072.03h-1.051v1.346h1.322c.295 0 .576-.104.804-.298.077-.067.415-.36.816-.802a.094.094 0 0 1 .05-.03l3.65-1.057a.108.108 0 0 1 .138.103z" fill="currentColor"> </path>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div class="container mx-auto mb-10 mt-10">
+		<div class="row-flex">
+			<div class="mx-auto  w-full"><img src="assets/img/front.gif" class="img-fluid mx-auto w-full rounded-md"></div>
+		</div>
+	</div>
+
+
+    <section id="mutate" >
+        <div class="container mx-auto">
+        <div class="row-flex mb-5">
+            <div>
+                <h1 class="common-title mb-3 font-extrabold main-yellow-color">MUTATE YOUR GODHATESNFTEES</h1></div>
+            <br>
+            <p class="common-p text-justify">Many cries are what I have heard throughout the 2 weeks of life of the genesis project. Please, I'm 67 and I don't want to hear any more anger, mutate your Ape Hater now and don't fall asleep in the process, I don't want to hear any more crying! “pEtERs, I DidN’t wErE AblE TO mInT, GIVE ME ANOthEr OPPoRtuNiTy pLz” They are the type of complaints most heard by paperhands who lie, sell cheap, repent and cry 🤦🏻‍♂️. There is nothing established, but what I can assure you is that you will not see a more psychopathic community than this one. Lots of shit and good luck mf! 🤘🇫🇷🇳🇬🥖</p>
+        </div>
+        <div class="mb-5 row-flex">
+            <div class="row-flex">
+                <div class="col-lg-3  order-lg-1"><img class="img-fluid rounded-md" src="assets/img/transformation/1.png" alt="">
+                    <p class="mt-2 mb-0 text-center">GodHatesNFTees (OG)</p>
+                </div>
+                <div class="my-lg-3 d-lg-flex justify-center items-center col-lg-9 order-lg-2 col-3 offset-lg-0 offset-2">
+                    <div class="sw">
+                        <!--<span class="m_scroll_arrows_down first mx-auto"></span><span
+        class="m_scroll_arrows_down second mx-auto"></span><span class="m_scroll_arrows_down third mx-auto"></span>--><img src="assets/img/arrow-down-1.gif"> </div>
+                </div>
+                <div class="col-lg-3  order-lg-3 offset-lg-0 offset-3"><img class="img-fluid rounded-md" src="assets/img/transformation/2.png">
+                    <p class="mt-2 mb-0 text-center">Sr Banano + OG</p>
+                </div>
+                <div class="my-lg-3 d-lg-flex justify-center items-center col-lg-9 col-3 order-lg-4 offset-lg-0 offset-2">
+                    <div class="sw">
+                        <!--<span class="m_scroll_arrows_down first mx-auto"></span><span
+        class="m_scroll_arrows_down second mx-auto"></span><span class="m_scroll_arrows_down third mx-auto"></span>--><img src="assets/img/arrow-down-1.gif"> </div>
+                </div>
+                <div class="col-lg-3  order-lg-5  offset-lg-0 offset-3"><img class="img-fluid rounded-md" src="assets/img/transformation/3.png" alt="">
+                    <p class="mt-2 mb-0 text-center">ApeHaterClub</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mb-20">
+            <button class="gen-button" id="connectButton2">Mutate your OG</button>
+        </div>
+        <!--testting button connected wallet-->
+        <!--public minting-->
+    </div>
+    </section>
+	
+
+	<!-- welcome -->
+	<section id="about">
+		<div class="container mx-auto">
+			<div class="mb-20 row-flex ">
+				<div class="col-flex">
+					<div class="mb-4 row-flex">
+						<div class="mb-4  col-lg-7 ">
+							<h1 class="d-flex font-extrabold main-yellow-color mb-3">APE HATER CLUB PUBLIC MINT IS LIVE</h1>
+							<p class="common-p mb-5">Ape Hater Club is the same club of scoundrels from God Hates NFTees, but after undergoing a mutation through Sr Banano.</p>
+							<p class="common-p mb-5"> If the noise we were making with the genesis collection wasn't enough, now they're going to have to put up with 12,222 protesting monkeys run by the sickest, most pro-active community in space hahahahaha.</p>
+                            <p> 2.178 NFTs are avaiable in Public Minting with a max timeframe of 24 hours, and 0.25 ETH per APE.</p>
+                            <div class="text-center mt-20">
+                                <button class="gen-button" id="connectButton">Connect & Mint</button>
+                            </div>
+                        </div>
+                     
+						<div class="my-lg-auto col-lg-4  offset-lg-1">
+							<div class="images-container-1">
+								<div class="row-flex">
+									<div class="pb-2 pr-2 col-6"><img class="img-fluid rounded-md" src="assets/img/welcome/1.png"></div>
+									<div class="pb-2 pl-2 col-6"><img class="img-fluid rounded-md" src="assets/img/welcome/2.png"></div>
+								</div>
+								<div class="row-flex">
+									<div class="pt-2 pr-2 col-6"><img class="img-fluid rounded-md" src="assets/img/welcome/3.png"></div>
+									<div class="pt-2 pl-2 col-6"><img class="img-fluid rounded-md" src="assets/img/welcome/4.png"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container mx-auto">
+			<div class="mb-5  row-flex">
+				<div class=" mb-5 mb-lg-0 col-lg-7  order-lg-last">
+					<h1 class="common-title mb-3 font-extrabold main-yellow-color">DISTRIBUTION &amp; PRICE</h1>
+					<p class="common-p text-justify mb-5">We have our first collection (OG), GodHatesNFTees with a supply of 5.022 NFTs.
+						<br>After that collection we released SrBanano with a supply of 10.044. The idea of Sr Bananos is the mutation to Ape of OGs, keeping their OG NFT, and burning Bananos. Each holder of OG collection could mint 2 Bananos per NFT.</p>
+					<p>Now we're here with Ape Hater Club (3rd collection), with a TOTAL supply of 12.222 NFTs, which 2.178 NFTs will be minted in Public Minting with a max timeframe of 24 hours, and 0.25 ETH per APE.
+						<br> The remaining NFTs (10.044), can be minted by Bananos + OG holders, with a FREE Mutation. </p>
+				</div>
+				<div class=" mb-0 my-lg-auto col-lg-4  offset-lg-1"><img src="assets/img/banana_transparent.png" class="img-fluid "></div>
+			</div>
+		</div>
+		<div class="container mx-auto">
+			<div class="mb-5 row-flex ">
+				<div class="col-flex">
+					<div class="mb-4 row-flex">
+						<div class="mb-4  col-lg-7 ">
+							<h1 class="d-flex font-extrabold main-yellow-color mb-3">HOW TO GET YOUR APE?</h1>
+							<p class="title-p mb-0">· Phase 1: PUBLIC MINTING IS LIVE - 24 HOURS TIMEFRAME or TILL SOLD OUT </p>
+							<br>
+							<p> Open to everyone (no requires banano or OG). Each mint costs 0.25 ETH (more than 1 Sr Banano floor). Max 3 mints per wallet.
+								<br>Supply: 2.178 </p>
+							<br>
+							<p class="title-p mb-0">· Phase 2: MUTATE YOUR OG + BANANO is LIVE - 4 DAYS TIMEFRAME </p>
+							<br>
+							<p> You need to own 1 GodHatesNFTees at least, and X Bananos, to get X Apes, burning X Bananos and keeping your GodHatesNFTees.
+								<br>Example: You have 10 Bananos, and 1 GodHates -&gt; You can get 10 Apes, burning your 10 Bananos.
+								<br>You can do it in the same transaction. FREE Mutation, only pay gas fee.
+								<br>Supply: 10.044 </p>
+							<br>
+							<p class="title-p mb-0">· Phase 3: COMPLETE THE SUPPLY (OPTIONAL)</p>
+							<br>
+							<p> If there's still supply remaining, after both previous phases, there will be a team mint to complete the supply (2,178 + 10,044 = 12.222) and verify the collection. </p>
+							<br> </div>
+						<div class="my-lg-auto col-lg-4  offset-lg-1">
+							<div class="images-container-1"> <img src="assets/img/hidden.png" class="rounded-md  "> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- -->
+	<div class="mb-20 ">
+		<div id="ticker" class="ticker-wrap">
+			<div class="ticker-target "> <span class="ticker-item-collection-1">
+      <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> </span> <span class="item-collection-2">
+      <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> <span class="ticker-item">🐵 ape hater club</span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div class="container mx-auto mb-10 mt-10">
+		<div class="row-flex">
+			<div class="mx-auto  w-full">
+				<video autoplay="" muted="" playsinline="" loop="" src="assets/img/BANANO.mp4" class="rounded-md"></video>
+			</div>
+		</div>
+	</div>
+	<!--marquee-->
+	<div class="mb-20 mt-20 ">
+		<div data-sr-id="5" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0s;">
+			<div class="marquee-container" style="--pause-on-hover:running; --pause-on-click:running;">
+				<div class="marquee" style="--play:running; --direction:normal; --duration:123s; --delay:0s; --iteration-count:infinite;">
+					<figure class="relative mx-4 h-auto w-[246px] rounded-md bg-gray-dark md:mx-7 md:w-[394px] overflow-hidden after:content-[''] after:block after:w-full after:pt-[127.4%]">
+						<div class="lazyload-wrapper absolute top-0 left-0 w-full h-full object-cover"><img class="duration-500 opacity-1 absolute top-0 left-0 w-full h-full object-cover" src="assets/img/marquee/47.png" aria-hidden="false"></div>
+					</figure>
+					<figure class="relative mx-4 h-auto w-[246px] rounded-md bg-gray-dark md:mx-7 md:w-[394px] overflow-hidden after:content-[''] after:block after:w-full after:pt-[127.4%]">
+						<div class="lazyload-wrapper absolute top-0 left-0 w-full h-full object-cover"><img class="duration-500 opacity-1 absolute top-0 left-0 w-full h-full object-cover" src="assets/img/marquee/49.png" aria-hidden="false"></div>
+					</figure>
+					<figure class="relative mx-4 h-auto w-[246px] rounded-md bg-gray-dark md:mx-7 md:w-[394px] overflow-hidden after:content-[''] after:block after:w-full after:pt-[127.4%]">
+						<div class="lazyload-wrapper absolute top-0 left-0 w-full h-full object-cover"><img class="duration-500 opacity-1 absolute top-0 left-0 w-full h-full object-cover" src="assets/img/marquee/50.png" aria-hidden="false"></div>
+					</figure>
+					<figure class="relative mx-4 h-auto w-[246px] rounded-md bg-gray-dark md:mx-7 md:w-[394px] overflow-hidden after:content-[''] after:block after:w-full after:pt-[127.4%]">
+						<div class="lazyload-wrapper absolute top-0 left-0 w-full h-full object-cover"><img class="duration-500 opacity-1 absolute top-0 left-0 w-full h-full object-cover" src="assets/img/marquee/51.png" aria-hidden="false"></div>
+					</figure>
+					<figure class="relative mx-4 h-auto w-[246px] rounded-md bg-gray-dark md:mx-7 md:w-[394px] overflow-hidden after:content-[''] after:block after:w-full after:pt-[127.4%]">
+						<div class="lazyload-wrapper absolute top-0 left-0 w-full h-full object-cover"><img class="duration-500 opacity-1 absolute top-0 left-0 w-full h-full object-cover" src="assets/img/marquee/52.png" aria-hidden="false"></div>
+					</figure>
+					<figure class="relative mx-4 h-auto w-[246px] rounded-md bg-gray-dark md:mx-7 md:w-[394px] overflow-hidden after:content-[''] after:block after:w-full after:pt-[127.4%]">
+						<div class="lazyload-wrapper absolute top-0 left-0 w-full h-full object-cover"><img class="duration-500 opacity-1 absolute top-0 left-0 w-full h-full object-cover" src="assets/img/marquee/54.png" aria-hidden="false"></div>
+					</figure>
+					<figure class="relative mx-4 h-auto w-[246px] rounded-md bg-gray-dark md:mx-7 md:w-[394px] overflow-hidden after:content-[''] after:block after:w-full after:pt-[127.4%]">
+						<div class="lazyload-wrapper absolute top-0 left-0 w-full h-full object-cover"><img class="duration-500 opacity-1 absolute top-0 left-0 w-full h-full object-cover" src="assets/img/marquee/55.png" aria-hidden="false"></div>
+					</figure>
+					<figure class="relative mx-4 h-auto w-[246px] rounded-md bg-gray-dark md:mx-7 md:w-[394px] overflow-hidden after:content-[''] after:block after:w-full after:pt-[127.4%]">
+						<div class="lazyload-wrapper absolute top-0 left-0 w-full h-full object-cover"><img class="duration-500 opacity-1 absolute top-0 left-0 w-full h-full object-cover" src="assets/img/marquee/56.png" aria-hidden="false"></div>
+					</figure>
+					<figure class="relative mx-4 h-auto w-[246px] rounded-md bg-gray-dark md:mx-7 md:w-[394px] overflow-hidden after:content-[''] after:block after:w-full after:pt-[127.4%]">
+						<div class="lazyload-wrapper absolute top-0 left-0 w-full h-full object-cover"><img class="duration-500 opacity-1 absolute top-0 left-0 w-full h-full object-cover" src="assets/img/marquee/57.png" aria-hidden="false"></div>
+					</figure>
+					<figure class="relative mx-4 h-auto w-[246px] rounded-md bg-gray-dark md:mx-7 md:w-[394px] overflow-hidden after:content-[''] after:block after:w-full after:pt-[127.4%]">
+						<div class="lazyload-wrapper absolute top-0 left-0 w-full h-full object-cover"><img class="duration-500 opacity-1 absolute top-0 left-0 w-full h-full object-cover" src="assets/img/marquee/58.png" aria-hidden="false"></div>
+					</figure>
+					<figure class="relative mx-4 h-auto w-[246px] rounded-md bg-gray-dark md:mx-7 md:w-[394px] overflow-hidden after:content-[''] after:block after:w-full after:pt-[127.4%]">
+						<div class="lazyload-wrapper absolute top-0 left-0 w-full h-full object-cover"><img class="duration-500 opacity-1 absolute top-0 left-0 w-full h-full object-cover" src="assets/img/marquee/59.png" aria-hidden="false"></div>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--========== FAQ v2==========-->
+	<section class="pr-4 pl-4" id="faq">
+		<div class="container mb-16 md:mb-28 max-w-[832px] mx-auto ">
+			<h1 class="common-title mb-3 font-extrabold main-yellow-color uppercase">Frequently Asked Questions</h1>
+			<div class="accordion">
+				<div class="accordion-item">
+					<button id="accordion-button-1" aria-expanded="false">
+						<h6 class="headline-6  mobile:pr-2 text-left flex-1 leading-[1.1]">What is an NFT?</h6><span class="icon block mt-[10px]" aria-hidden="true"></span> </button>
+					<div class="accordion-content markdown faq-item uppercase">
+						<p>An NFT is a new type of image format scam. JPGEs that promise promising memberships, and the only thing you get is to be in a Discord in which a message is sent every 5 days.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button id="accordion-button-2" aria-expanded="false">
+						<h6 class="headline-6  mobile:pr-2 text-left flex-1 leading-[1.1]">Who is Sr Peters?</h6><span class="icon block mt-[10px]" aria-hidden="true"></span> </button>
+					<div class="accordion-content markdown faq-item uppercase">
+						<p>A 67-year-old man with erectile dysfunction who consults everything with his cat. Obsessive with 4chan and meme culture. Future opera vocalist.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button id="accordion-button-3" aria-expanded="false">
+						<h6 class="headline-6  mobile:pr-2 text-left flex-1 leading-[1.1]">Why the hell does this project have such a high floor price?</h6><span class="icon block mt-[10px]" aria-hidden="true"></span> </button>
+					<div class="accordion-content markdown faq-item uppercase ">
+						<p>If you don't want to be silly trying, don't try to understand why. Don't try to find the logic because it does not have it. A community unit united and with the goal of raising the meme flag in the NFT space, has broken records that your favorite projects take 2 years to achieve the goal</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button id="accordion-button-4" aria-expanded="false">
+						<h6 class="headline-6  mobile:pr-2 text-left flex-1 leading-[1.1]">What makes GHNFTees and Ape Hater Club special?</h6><span class="icon block mt-[10px]" aria-hidden="true"></span> </button>
+					<div class="accordion-content markdown faq-item uppercase">
+						<p>Community and transparency. There is nothing established, it is nothing serious, we get up every day, have a coffee, go to Twitter space / Discord and talk about what's next.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button id="accordion-button-5" aria-expanded="false">
+						<h6 class="headline-6  mobile:pr-2 text-left flex-1 leading-[1.1]">What is the Roadmap?</h6><span class="icon block mt-[10px]" aria-hidden="true"></span> </button>
+					<div class=" accordion-content markdown faq-item uppercase">
+						<div class="mt-2 mb-2 "> <img src="assets/img/roadmap.jpeg" class="mx-auto"></div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button id="accordion-button-5" aria-expanded="false">
+						<h6 class="headline-6  mobile:pr-2 text-left flex-1 leading-[1.1]">Is there Discord? How can I enter?</h6><span class="icon block mt-[10px]" aria-hidden="true"></span> </button>
+					<div class="accordion-content markdown faq-item uppercase">
+						<p>The truth is that I was not attracted to the idea of making a Discord (repetitive patterns between projects). But after being banned 3 times on social networks, I realized that a community of psychos must wait for them somewhere, thus creating a Discord only for holders, which has the same daily activity as the annual activity of any other project.</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button id="accordion-button-5" aria-expanded="false">
+						<h6 class="headline-6  mobile:pr-2 text-left flex-1 leading-[1.1]">Who is the team behind the project?
+          </h6><span class="icon block mt-[10px]" aria-hidden="true"></span> </button>
+					<div class="accordion-content markdown faq-item uppercase">
+						<div class="w-full grid grid-cols-3 gap-4 mt-4 mb-4">
+							<div> <img src="assets/img/team/1.png"></div>
+							<div><img src="assets/img/team/2.png"></div>
+							<div><img src="assets/img/team/3.png"></div>
+						</div>
+						<p>Att: Note the irony, I do not want to be sued by these 3 enlightened LMAO</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<button id="accordion-button-5" aria-expanded="false">
+						<h6 class="headline-6  mobile:pr-2 text-left flex-1 leading-[1.1]">What's next?
+          </h6><span class="icon block mt-[10px]" aria-hidden="true"></span> </button>
+					<div class="accordion-content markdown faq-item uppercase">
+						<p>After raffling $180,000 in prizes in 8 days of the project among holders of our community, the next thing is nothing more than continuing to be a community project while being different, bringing new things weekly and above all having fun in our own way. Follow us on Twitter for more information. P.S: Twitter motherfuckers, give me back the original @GodHatesNFTees account, you deserve to be dumped by Elon hahahahaha</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="mt-10 mb-5 row">
+		<div class="col">
+			<div class="d-flex justify-center ">
+				<p class="common-p text-center text-break mb-0"><span class="bold-text">APE HATER CLUB SMART CONTRACT:
+                </span><a href="" class="link">COMING SOON</a></p>
+			</div>
+		</div>
+	</div>
+	<footer class="relative z-30 h-auto w-screen pt-12 md:pt-8 font-cta text-gray-light md:bg-transparent md:w-full px-0">
+		<div class="max-w-screen-xl relative z-20 mx-auto flex w-full flex-col items-center text-[8px]   md:w-[80%] mb-12 ">
+			<div class=" w-full mb-4 ">
+				<div class=" md:border-b opacity-60  "></div>
+			</div>
+			<div class="md:flex sm:w-full md:space-x-12 items-center"> <span class="footer-text  mt-8 mb-0 md:mt-0 md:mb-0 block whitespace-nowrap text-center md:text-left uppercase text-white ">© 2022
+              Ape Hater Club</span>
+				<ul class="items-center mt-8 text-center w-full space-y-2 sm:flex sm:space-y-0 sm:space-x-6 sm:justify-center md:my-0  md:space-x-4">
+					<li> <a class=" inline-block footer-text whitespace-nowrap desktop-nav-highlight  border-gray-light pb-1 uppercase" href="https://opensea.io/collection/godhatesnftees" target="_blank" rel="noopener noreferrer">God Hates NFTees Collection</a> </li>
+					<li> <a href="https://opensea.io/collection/srbananos" target="_blank" rel="noopener noreferrer" class="inline-block footer-text whitespace-nowrap desktop-nav-highlight border-gray-light pb-1 uppercase">Sr Bananos Collection</a> </li>
+					<li> <a class="inline-block footer-text whitespace-nowrap desktop-nav-highlight border-gray-light pb-1 uppercase" href="https://twitter.com/srpeterseth" target="_blank" rel="noopener noreferrer">SrPeters Twitter</a> </li>
+				</ul>
+				<div class="flex items-center  md:justify-end">
+					<ul class="mt-14 flex align-center items-center md:justify-end space-x-5 pt-[2px] md:mt-0">
+						<li>
+							<a href="https://twitter.com/ApeHaterClub" target="_blank" rel="noreferrer" class="inline-block h-5 md:h-3 text-gray-light">
+								<svg class="h-full w-auto" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M21.0268 2.17225C20.2532 2.51569 19.4217 2.74698 18.5491 2.85124C19.4401 2.31769 20.1244 1.47223 20.4459 0.464701C19.6127 0.958831 18.6893 1.31804 17.7063 1.51166C16.9204 0.673217 15.7981 0.1493 14.5575 0.1493C11.7724 0.1493 9.72576 2.74786 10.3548 5.44542C6.77062 5.26582 3.59207 3.54863 1.46399 0.93868C0.3338 2.87752 0.877868 5.41388 2.79831 6.69827C2.09216 6.67549 1.42632 6.48187 0.845452 6.15858C0.798142 8.157 2.23059 10.0266 4.30523 10.4428C3.69809 10.6075 3.03311 10.646 2.35675 10.5164C2.9052 12.2301 4.49798 13.4768 6.38688 13.5118C4.57332 14.9338 2.28841 15.5689 0 15.2991C1.90906 16.523 4.17732 17.2371 6.61292 17.2371C14.6224 17.2371 19.1475 10.4726 18.8742 4.40547C19.717 3.79657 20.4485 3.03698 21.0268 2.17225Z" fill="currentColor"></path>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://discord.gg/godhatesnfteesclub" target="_blank" rel="noreferrer" class="inline-block h-5 md:h-3 text-gray-light">
+								<svg class="h-full w-auto" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_0_6)">
+										<path d="M20.1616 2.47123C18.7156 1.80777 17.1651 1.31896 15.5439 1.039C15.5143 1.0336 15.4849 1.0471 15.4696 1.07411C15.2702 1.42878 15.0493 1.89149 14.8947 2.25517C13.151 1.99412 11.4162 1.99412 9.70823 2.25517C9.55352 1.8834 9.32461 1.42878 9.1243 1.07411C9.10909 1.048 9.0796 1.0345 9.05008 1.039C7.42977 1.31807 5.87921 1.80688 4.43237 2.47123C4.41985 2.47663 4.40911 2.48564 4.40198 2.49734C1.4609 6.89125 0.655219 11.1772 1.05046 15.4099C1.05225 15.4306 1.06387 15.4505 1.07997 15.463C3.02041 16.8881 4.90006 17.7532 6.7448 18.3266C6.77433 18.3356 6.80561 18.3248 6.8244 18.3005C7.26077 17.7046 7.64976 17.0762 7.98328 16.4154C8.00296 16.3768 7.98417 16.3308 7.94395 16.3155C7.32694 16.0815 6.73943 15.7961 6.17429 15.4721C6.12959 15.4459 6.12601 15.382 6.16713 15.3514C6.28606 15.2623 6.40502 15.1696 6.51858 15.0759C6.53912 15.0588 6.56775 15.0552 6.59191 15.066C10.3047 16.7611 14.3242 16.7611 17.9931 15.066C18.0172 15.0543 18.0459 15.0579 18.0673 15.075C18.1809 15.1687 18.2998 15.2623 18.4197 15.3514C18.4608 15.382 18.4581 15.4459 18.4134 15.4721C17.8483 15.8024 17.2607 16.0815 16.6428 16.3146C16.6026 16.3299 16.5847 16.3768 16.6044 16.4154C16.9451 17.0753 17.3341 17.7036 17.7624 18.2996C17.7803 18.3248 17.8125 18.3356 17.842 18.3266C19.6957 17.7532 21.5753 16.8881 23.5158 15.463C23.5328 15.4505 23.5435 15.4315 23.5453 15.4108C24.0183 10.5173 22.753 6.26651 20.1911 2.49823C20.1848 2.48564 20.1741 2.47663 20.1616 2.47123ZM8.53772 12.8326C7.41993 12.8326 6.4989 11.8064 6.4989 10.5461C6.4989 9.2858 7.40206 8.25958 8.53772 8.25958C9.68229 8.25958 10.5944 9.29481 10.5765 10.5461C10.5765 11.8064 9.67334 12.8326 8.53772 12.8326ZM16.0759 12.8326C14.9582 12.8326 14.0371 11.8064 14.0371 10.5461C14.0371 9.2858 14.9403 8.25958 16.0759 8.25958C17.2205 8.25958 18.1326 9.29481 18.1147 10.5461C18.1147 11.8064 17.2205 12.8326 16.0759 12.8326Z" fill="currentColor"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_0_6">
+											<rect width="22.6862" height="17.5739" fill="white" transform="translate(0.958481 0.906255)"></rect>
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://instagram.com/ApeHaterClub" target="_blank" rel="noreferrer" class="inline-block h-5 md:h-3 text-gray-light">
+								<svg class="h-full w-auto" stroke="currentColor" fill="none" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+									<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="currentColor"></path>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://opensea.io/collection/ApeHaterClub" target="_blank" rel="noreferrer" class="inline-block h-5 md:h-3 text-gray-light">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-full w-auto" width="15.16" height="13" viewBox="0 0 24 24" fill="none">
+									<path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.629 0 12 0ZM5.92 12.403l.051-.081 3.123-4.884a.107.107 0 0 1 .187.014c.52 1.169.972 2.623.76 3.528-.088.372-.335.876-.614 1.342a2.405 2.405 0 0 1-.117.199.106.106 0 0 1-.09.045H6.013a.106.106 0 0 1-.091-.163zm13.914 1.68a.109.109 0 0 1-.065.101c-.243.103-1.07.485-1.414.962-.878 1.222-1.548 2.97-3.048 2.97H9.053a4.019 4.019 0 0 1-4.013-4.028v-.072c0-.058.048-.106.108-.106h3.485c.07 0 .12.063.115.132-.026.226.017.459.125.67.206.42.636.682 1.099.682h1.726v-1.347H9.99a.11.11 0 0 1-.089-.173l.063-.09c.16-.231.391-.586.621-.992.156-.274.308-.566.43-.86.024-.052.043-.107.065-.16.033-.094.067-.182.091-.269a4.57 4.57 0 0 0 .065-.223c.057-.25.081-.514.081-.787 0-.108-.004-.221-.014-.327-.005-.117-.02-.235-.034-.352a3.415 3.415 0 0 0-.048-.312 6.494 6.494 0 0 0-.098-.468l-.014-.06c-.03-.108-.056-.21-.09-.317a11.824 11.824 0 0 0-.328-.972 5.212 5.212 0 0 0-.142-.355c-.072-.178-.146-.339-.213-.49a3.564 3.564 0 0 1-.094-.197 4.658 4.658 0 0 0-.103-.213c-.024-.053-.053-.104-.072-.152l-.211-.388c-.029-.053.019-.118.077-.101l1.32.357h.01l.173.05.192.054.07.019v-.783c0-.379.302-.686.679-.686a.66.66 0 0 1 .477.202.69.69 0 0 1 .2.484V6.65l.141.039c.01.005.022.01.031.017.034.024.084.062.147.11.05.038.103.086.165.137a10.351 10.351 0 0 1 .574.504c.214.199.454.432.684.691.065.074.127.146.192.226.062.079.132.156.19.232.079.104.16.212.235.324.033.053.074.108.105.161.096.142.178.288.257.435.034.067.067.141.096.213.089.197.159.396.202.598a.65.65 0 0 1 .029.132v.01c.014.057.019.12.024.184a2.057 2.057 0 0 1-.106.874c-.031.084-.06.17-.098.254-.075.17-.161.343-.264.502-.034.06-.075.122-.113.182-.043.063-.089.123-.127.18a3.89 3.89 0 0 1-.173.221c-.053.072-.106.144-.166.209-.081.098-.16.19-.245.278-.048.058-.1.118-.156.17-.052.06-.108.113-.156.161-.084.084-.15.147-.208.202l-.137.122a.102.102 0 0 1-.072.03h-1.051v1.346h1.322c.295 0 .576-.104.804-.298.077-.067.415-.36.816-.802a.094.094 0 0 1 .05-.03l3.65-1.057a.108.108 0 0 1 .138.103z" fill="currentColor"> </path>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="assets/js/jquery.min.js"></script>
+	<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"
+    integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript" src="assets/js/spin.umd.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3@1.6.0/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.4/dist/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.6.6/dist/umd/index.min.js"></script>
+    <script src="assets/js/index.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>
